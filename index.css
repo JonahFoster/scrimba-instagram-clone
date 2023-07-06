@@ -1,0 +1,86 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans 3', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #C6C6C6;
+}
+
+.container {
+    width: 375px;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 120px;
+    height: 50px;
+    margin: 10px;
+}
+
+.avatar {
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    margin: 10px;
+}
+
+/*Post Content*/
+
+.post {}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.post-name {
+    font-size: 14px;
+    padding-top: 4px;
+}
+
+.post-name b {
+    font-size: 15px;
+}
+
+.post-img {
+    width: 375px;
+    height: 375px;
+    margin: 0;
+}
+
+.post-icons {
+    display: flex;
+    gap: 10px;
+    margin: 10px;
+}
+
+.post-icon {
+    width: 23px;
+}
+
+.like-img:hover {
+    content: url("images/heart-hover.svg");
+}
+
+.comment-img:hover {
+    content: url("images/comment-hover.svg");
+}
+
+.share-img:hover {
+    content: url("images/share-hover.svg");
+}
+
+.post-likes {
+    margin: 10px;
+    font-weight: 700;
+}
+
+.post-caption {
+    margin: 10px 10px 20px 10px;
+}
+
