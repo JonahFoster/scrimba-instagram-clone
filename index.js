@@ -30,8 +30,14 @@ const posts = [
         isLiked: false,
     }
 ]
+// Preload like images
+const heartRegular = new Image();
+heartRegular.src = "images/heart-regular.svg";
+const heartHover = new Image();
+heartHover.src = "images/heart-hover.svg";
 
 const postSection = document.getElementById('post-section')
+
 // Build each post in posts array
 for (let i = 0; i < posts.length; i++) {
     // create elements
@@ -87,10 +93,10 @@ for (let i = 0; i < posts.length; i++) {
     postImg.addEventListener('dblclick', function() {
         if (posts[i].isLiked === true) {
             posts[i].likes -= 1
-            likeImg.src = "images/heart-regular.svg";
+            likeImg.src = heartRegular.src;
         } else {
             posts[i].likes += 1
-            likeImg.src = "images/heart-hover.svg";
+            likeImg.src = heartHover.src;
         }
         posts[i].isLiked = !posts[i].isLiked;
         postLikesP.innerText = `${posts[i].likes} likes`;
@@ -100,10 +106,10 @@ for (let i = 0; i < posts.length; i++) {
     likeImg.addEventListener('click', function() {
         if (posts[i].isLiked === true) {
             posts[i].likes -= 1
-            likeImg.src = "images/heart-regular.svg";
+            likeImg.src = heartRegular.src;
         } else {
             posts[i].likes += 1
-            likeImg.src = "images/heart-hover.svg";
+            likeImg.src = heartHover.src;
         }
         posts[i].isLiked = !posts[i].isLiked;
         postLikesP.innerText = `${posts[i].likes} likes`;
